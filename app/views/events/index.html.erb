@@ -1,1 +1,19 @@
 events#index page
+
+<br>
+<br>
+<%= link_to "Mak ur oon EVARNT", new_event_path %>
+
+
+
+<h1>EVENTSSSSS</h1>
+
+
+<%= @events.each do |event| %>
+  <h1><%= event.name %></h1>
+  <h3><%= event.date %></h3>
+  <h3><%= event.capacity %></h3>
+  <h2><%= event.city %></h2>
+  <%= link_to "Come tak a look at me", event_path(event) %>
+
+  <% end %>
